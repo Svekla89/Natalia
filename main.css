@@ -9,6 +9,7 @@ body {
 
 .wrapper {
     width: 1000px;
+    /*TODO: Добавить отступы для контента*/
 }
 
 
@@ -135,6 +136,8 @@ nav ul ul li {
     color: rgba(0, 0, 0, 0.664);
     line-height: 18px;
     font-size: 11px;
+    font-family: sans-serif;
+    /* TODO: Шрифт не тот */
 }
 
 /*** Изображение ***/

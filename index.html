@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="base.min.css">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="./base.min.css"> <!--TODO: у стилей и у всех других импортируемых файлов должны быть относительные пути-->
+    <link rel="stylesheet" href="./main.css">
 </head>
 <body>
     
@@ -41,7 +41,7 @@
                 <p class='main-block__text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dignissimos nihil veritatis suscipit. 
                     Aperiam eaque atque fuga aut minus explicabo accusamus repellat similique, mollitia sint, obcaecati sunt optio, 
                     perspiciatis possimus rem expedita iste quia doloremque molestias voluptates perferendis voluptate fugiat!</p>
-                <img class='main-block__img' src="/Users/mymac/Desktop/Верстка/img.jpeg" alt="alone img">
+                <img class='main-block__img' src="./images/img.jpeg" alt="alone img"> <!--TODO: Используем только относительные пути-->
                 <div class='main-block__links'>
                     <span class='main-block__links-text'>Lorem ipsum, dolor sit amet consectetur adipisicing elit   <a href="#"> [ Lorem ]</a></span>
                     <span class='main-block__links-text'>Lorem ipsum, dolor sit amet consectetur adipisicing elit   <a href="#"> [ Lorem ]</a></span>
@@ -58,7 +58,7 @@
                 <span class='main-block__links-text' style='border-bottom: 1px dotted black;border-top: 1px dotted black; padding-top: 5px;'>
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit   <a href="#"> [ Lorem ]</a></span>
             </section>
-
+            <!--TODO: Пропал блок карьера-->
         </main>
 
         <footer class='footer-block'>
