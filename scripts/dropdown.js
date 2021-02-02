@@ -25,6 +25,7 @@ function log(event){
   console.log(event)
 }
 
+
 // Второй способ навешивания событий
 const showFirstLink = document.querySelector('.show')
 const hideFirstLink = document.querySelector('.hide')
@@ -42,3 +43,4 @@ showThirdLink.addEventListener('click', dropdown)
 hideThirdLink.addEventListener('click', dropdown)
 showThirdLink.addEventListener('click', log)
 hideThirdLink.addEventListener('click', log)
+

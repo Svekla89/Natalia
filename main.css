@@ -67,7 +67,7 @@ nav ul li {
     border-right: 1px solid rgba(128, 128, 128, 0.247);
     color rgb(0, 0, 0, 0.664);
     font-weight: 100;
-    font-size: 11px;
+    
 }
 
 
@@ -158,7 +158,6 @@ nav ul ul li {
     margin-top: 5px;
     padding-bottom: 5px;
     color: rgba(0, 0, 0, 0.664);
-    font-size: 11px;
     font-weight: bold;
     border-bottom: 1px dotted black;
 }
