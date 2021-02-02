@@ -41,3 +41,24 @@ const changeBgColor = (target) => {
 
 const partnerBtn = document.querySelector('.header-block__nav-item.forth')
 partnerBtn.addEventListener('click', (event) => changeBgColor(event.target))
+
+
+//меняем тест кнопки поддержка на текст соседней кнопки
+
+const changeBtnText = (event) =>{
+    const currentBtnText = event.target.innerHTML
+    const nextBtnText = event.target.parentElement.parentElement.querySelector(".sixth").innerHTML
+    event.target.innerHTML = nextBtnText
+    event.target.parentElement.parentElement.querySelector(".sixth").innerHTML = currentBtnText
+}
+const supportBtn = document.querySelector('.header-block__nav-item.fifth')
+supportBtn.addEventListener('click', (event) => changeBtnText(event))
+
+//наводим на вакансии и появляется вложенный список меню
+
+const hoverVacantions = (event) =>{
+    event.target.parentElement.querySelector("ul").style.display = "inline"
+}
+
+const Vacantions = document.querySelector(".header-block__nav-item.seventh")
+Vacantions.addEventListener('click', (event) => hoverVacantions(event))
