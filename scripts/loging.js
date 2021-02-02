@@ -23,7 +23,21 @@ solution.onclick = (event)=>logSolutions(event)
 // Клиенты -> логгирует таргет картинки
 
 function clientsImg(event){
-document.getElementsByTagName("img")[0].setAttribute("src","http://www.gstatic.com/webp/gallery/4.jpg");
-    }
+//document.getElementsByTagName("img")[0].setAttribute("src","http://www.gstatic.com/webp/gallery/4.jpg");
+const images = document.getElementsByTagName("img")
+  for(let i = 0; i < images.length; i++){
+    images[i].setAttribute("src","http://www.gstatic.com/webp/gallery/4.jpg")
+  }
+}
+
 const clientsMenu = document.querySelector('a.header-block__nav-item.third')    
-clientsMenu.onclick = (event)=>clientsImg(event)   
+clientsMenu.onclick = (event)=>clientsImg(event)
+
+//Партнеры -> меняет backgroundColor кнопки "Партнеры"
+
+const changeBgColor = (target) => {
+  target.style.backgroundColor = "yellow"
+}
+
+const partnerBtn = document.querySelector('.header-block__nav-item.forth')
+partnerBtn.addEventListener('click', (event) => changeBgColor(event.target))
