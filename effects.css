@@ -1,0 +1,41 @@
+//Анимация
+@keyframes super-animate {
+    from {
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes color-changer {
+    from {
+      background: #21B7CB;
+    }
+    to {
+      background: #CB2187;
+    }
+  }
+  
+  body {
+    margin: 0;
+    animation: color-changer 10s infinite;
+  }
+  
+  .emojis {
+    animation: bounce; /*bounce
+    flash
+    pulse
+    rubberBand
+    shakeX
+    shakeY
+    headShake
+    swing
+    tada
+    wobble
+    jello
+    heartBeat
+    остальные - https://animate.style/*/
+    animation-duration: 2s; 
+  }
+  

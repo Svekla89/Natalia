@@ -55,10 +55,28 @@ const supportBtn = document.querySelector('.header-block__nav-item.fifth')
 supportBtn.addEventListener('click', (event) => changeBtnText(event))
 
 //наводим на вакансии и появляется вложенный список меню
+//Доработать функционал кнопки Карьера, и если ранее на неё нажимали, то следующим нажатием скрывать блок меню.
 
 const hoverVacantions = (event) =>{
-    event.target.parentElement.querySelector("ul").style.display = "inline"
+
+    let displayElement = event.target.parentElement.querySelector("ul")
+    if (displayElement.style.display  === "inline"){
+        displayElement.style.display  = "none"
+    } else{
+        displayElement.style.display  = "inline"
+    }
+
 }
 
-const Vacantions = document.querySelector(".header-block__nav-item.seventh")
-Vacantions.addEventListener('click', (event) => hoverVacantions(event))
+const vacantions = document.querySelector(".header-block__nav-item.seventh")
+vacantions.addEventListener('contextmenu', (event) => hoverVacantions(event))
+
+
+//3) Навесить на кнопку Вакансия функционал изменения текста, перед картинкой.
+
+const changeBtnCarier = () =>{
+    let carierText = document.querySelector("p.main-block__text")
+    carierText.innerHTML = "Шел 1812 год...."
+}
+const btnVacantion = document.querySelector("a.link_one")
+btnVacantion.addEventListener('click', changeBtnCarier)
