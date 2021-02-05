@@ -6,6 +6,9 @@ const handleChangeSlider = (event) => {
       activeImage = i
     }
   }
+
+
+  
   images[activeImage].classList.remove('active')
 /*Тут или у нас первая картинка и мы нажимаем на левую стрелочку, или у нас последняя картинка и мы нажимаем на правую стрелочку*/
   if(activeImage === 0 && event.target.className === 'left_arrow'){

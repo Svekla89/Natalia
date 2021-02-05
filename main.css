@@ -193,6 +193,14 @@ nav ul ul li {
     display: block;
 }
 
+.images__container > .active_hide {
+    opacity: 0;
+}
+.images__container > .active_show {
+    opacity: 1;
+}
+
+
     /*
     .images__container:hover .main-block__img{
         transform: translateX(1000px);
