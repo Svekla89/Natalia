@@ -7,25 +7,40 @@ const handleChangeSlider = (event) => {
     }
   }
 
+  images[activeImage].classList.remove('active_show') // Удаляем с прошлой картинки непрозрачность
 
-  
-  images[activeImage].classList.remove('active')
-/*Тут или у нас первая картинка и мы нажимаем на левую стрелочку, или у нас последняя картинка и мы нажимаем на правую стрелочку*/
-  if(activeImage === 0 && event.target.className === 'left_arrow'){
-    images[images.length - 1].classList.add('active')
-    return
-  } 
+  setTimeout(() => { // оборачиваем в таймер 0.5s
+    images[activeImage].classList.remove('active') // Удаляем прошлую картинку
 
-  if (activeImage === (images.length -1) && event.target.className === 'right_arrow'){
-    images[0].classList.add('active')
-    return
-  }
-  
-  if (event.target.className === 'left_arrow') {
-    images[activeImage - 1].classList.add('active')
-  } else {
-    images[activeImage + 1].classList.add('active')
-  }
+    if(activeImage === 0 && event.target.className === 'left_arrow'){
+      images[images.length - 1].classList.add('active') // отображаем картинку
+      setTimeout(() => { // делаем таймер для плавного появления картинки
+        images[images.length - 1].classList.add('active_show') // удаляем прозрачность
+      },500)
+      return
+    }
+
+    if (activeImage === (images.length -1) && event.target.className === 'right_arrow'){
+      images[0].classList.add('active')
+      setTimeout(() => {
+        images[0].classList.add('active_show')
+      },500)
+      return
+    }
+
+    if (event.target.className === 'left_arrow') {
+      images[activeImage - 1].classList.add('active')
+      setTimeout(() => {
+        images[activeImage - 1].classList.add('active_show')
+      }, 500)
+
+    } else {
+      images[activeImage + 1].classList.add('active')
+      setTimeout(() => {
+        images[activeImage + 1].classList.add('active_show')
+      }, 500)
+    }
+  }, 500)
 }
 
 const leftArrow = document.querySelector(".left_arrow")

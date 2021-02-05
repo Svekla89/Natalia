@@ -151,6 +151,7 @@ nav ul ul li {
     display: flex;
     justify-content: center;
     position:relative;
+    transition: 0.5s;
 }
 
 .images__container > .left_arrow {
@@ -187,6 +188,8 @@ nav ul ul li {
 
 .images__container > img {
     display: none;
+    opacity: 0;
+    transition: 0.5s;
 }
 
 .images__container > .active {
@@ -196,6 +199,7 @@ nav ul ul li {
 .images__container > .active_hide {
     opacity: 0;
 }
+
 .images__container > .active_show {
     opacity: 1;
 }
