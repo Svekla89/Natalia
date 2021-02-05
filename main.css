@@ -145,14 +145,14 @@ nav ul ul li {
 .main-block__img {
     margin-top: 15px;
     transition: width 2s, height 2s,  transform 2s;
-    transition: width 2s, height 2s, transform 2s;
+ 
 }
 
 .main-block__img:hover {
     width: 200px;
     height: 200px;
     transform: rotate(180deg);
-    transform: rotate(180deg);
+  
 
 }
 
