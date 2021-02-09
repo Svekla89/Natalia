@@ -285,3 +285,8 @@ nav ul ul li {
 .footer-block__column-points {
     margin-top: 10px;
 }
+
+form {
+    display: flex;
+    flex-direction: column;
+}
