@@ -47,4 +47,4 @@ const leftArrow = document.querySelector(".left_arrow")
 const rightArrow = document.querySelector(".right_arrow")
 
 leftArrow.addEventListener('click', (e) => handleChangeSlider(e))
-rightArrow.addEventListener('click', (e) => handleChangeSlider(e))
+rightArrow.addEventListener('click', (e) => handleChangeSlider(e)) 
