@@ -82,27 +82,26 @@
             </section>
             <!--TODO: Пропал блок карьера-->
 
-
-            <form>
+            <form action="/#" method="post">
                 <label>
                     Firstname
-                    <input type="text" placeholder="Firstname" autocomplete="on"/>
+                    <input type="text" placeholder="Firstname" name="firstname" autocomplete="off" />
                 </label>
                 <label>
                     lastname
-                    <input type="text" placeholder="Lastname"/>
+                    <input type="text" placeholder="Lastname" name="lastname" autocomplete="off" />
                 </label>
                 <label>
                     email
-                    <input type="email" placeholder="Email"/>
+                    <input type="email" placeholder="Email" name="email" autocomplete="off" />
                 </label>
                 <label>
                     phone
-                    <input type="tel" placeholder="Phone"/>
+                    <input type="tel" placeholder="Phone" name="phone" autocomplete="off" />
                 </label>
                 <label>
                     Age
-                <input type="number" />
+                <input type="number" autocomplete="off" name="age" />
                 </label>
 
                 <input type="submit"/>
@@ -110,15 +109,15 @@
             <form>
                 <label>
                     login
-                    <input type = "text" placeholder="login"/>
+                    <input type = "text" name="login" disabled placeholder="login"/>
                 </label>
                 <label>
                     Date of birth 
-                    <input type = "date" placeholder = "Date of birth"/>
+                    <input type = "date" name="date" placeholder = "Date of birth"/>
                 </label>
                 <label>
                     Password
-                    <input type ="password" placeholder="password"/>
+                    <input type ="password" name="password" placeholder="password"/>
                 </label>
                 <input type = "submit"/>
                 <input type = "reset"/>
@@ -171,6 +170,7 @@
     <script src="./scripts/dropdown.js"></script>
     <script src="./scripts/loging.js"></script>
     <script src="./scripts/slider.js"></script>
+    <script src="./scripts/form.js"></script>
 
 </body>
 </html>
