@@ -103,8 +103,19 @@
                     Age
                 <input type="number" autocomplete="off" name="age" />
                 </label>
-
-                <input type="submit"/>
+                <label>
+                    Female
+                    <input type ="radio" name ="gender"/>
+                </label>
+                <label>
+                    Male
+                    <input type ="radio" name ="gender"/>
+                </label>
+                <label>
+                    Other
+                    <input type ="radio" name ="gender"/>
+                </label>          
+                <input type="submit" id = "confirm1" disabled/>
             </form>
             <form>
                 <label>
@@ -119,8 +130,13 @@
                     Password
                     <input type ="password" name="password" placeholder="password"/>
                 </label>
-                <input type = "submit"/>
+                <label>
+                    Согласны ли вы на обработку персональных данных
+                <input type = "checkbox" name = "confirm"/>
+            </label>
+                <input type = "submit" id ="confirm" disabled/>
                 <input type = "reset"/>
+
             </form>
         </main>
 
