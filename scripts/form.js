@@ -54,8 +54,10 @@ const btnSubmit = document.getElementById("confirm1")//кнопка отправ
 if(event.target.checked){ //если чек бокс активен
   btnSubmit.disabled = false // тогда кнопка отправки активно
 } else{
-  submitBtn.disabled = true // иначе нет
+  btnSubmit.disabled = true // иначе нет
 }
 }
 const genderBox = document.querySelector('input[name=gender]')
 genderBox.addEventListener("change", event => rarioConfirm(event))
+
+// Сделать ту же самую проверку но уже проверять заполненность всех полей первой формы
