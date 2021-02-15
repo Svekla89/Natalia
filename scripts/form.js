@@ -38,12 +38,13 @@ login.addEventListener('input', event => onChangeUserName(event))
 
 const onConfirm = (event) =>{ 
   const submitBtn = document.getElementById("confirm") //кнопка отправки
-  if(event.target.checked){ //если чек бокс активен
+  if((event.target.checked)||(event.target.value)) { //если чек бокс активен
     submitBtn.disabled = false // тогда кнопка отправки активно
   } else{
     submitBtn.disabled = true // иначе нет
   }
 }
+
 const submitBox = document.querySelector('input[name=confirm]')
 submitBox.addEventListener("change", event => onConfirm(event))
 
@@ -57,7 +58,12 @@ if(event.target.checked){ //если чек бокс активен
   btnSubmit.disabled = true // иначе нет
 }
 }
-const genderBox = document.querySelector('input[name=gender]')
-genderBox.addEventListener("change", event => rarioConfirm(event))
+
+const genderBoxArr = document.querySelectorAll('input[name=gender]')//массив из радио кнопок
+for(let i=0; i<genderBoxArr.length; i++){
+  genderBoxArr[i].addEventListener("change", event => rarioConfirm(event))//присваеваем каждому элементу массива input[name=gender] addEventListener
+}
+
+
 
 // Сделать ту же самую проверку но уже проверять заполненность всех полей первой формы
