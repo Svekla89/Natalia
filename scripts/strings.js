@@ -10,7 +10,7 @@ email.addEventListener("blur", event => changePhoneNumber(event))
 
 const changeEmail = (event)=>{
     const emailText = event.target.value
-    if(emailText === "/.+@.+\..+"){
+    if(emailText === "\.+@.+\..+"){
         event.target.value = true
         console.log(event.target.value)
     }   
