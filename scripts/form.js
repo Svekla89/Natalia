@@ -67,3 +67,38 @@ for(let i=0; i<genderBoxArr.length; i++){
 
 
 // Сделать ту же самую проверку но уже проверять заполненность всех полей первой формы
+
+
+const formToGoogle = document.querySelector('#first_form')
+formToGoogle.addEventListener('submit', (e) => {
+  // const url = "https://script.google.com/macros/s/AKfycbzPEfjfXKUi5ED3k_O3h_LV5AyNIFrgJ__OBeWTDwd94c_3IoM/exec", oData = new FormData(formToGoogle);
+  //
+  // const oReq = new XMLHttpRequest();
+  // oReq.open("GET", url);
+  // //oReq.setRequestHeader('Content-Type', 'json')
+  // oReq.onload = function(oEvent) {
+  //   if (oReq.status == 200) {
+  //     console.log("Uploaded!");
+  //   } else {
+  //     console.log("Error " + oReq.status);
+  //   }
+  // };
+  //
+  // oReq.send(oData);
+  e.preventDefault();
+
+  var xhr = new XMLHttpRequest();
+  xhr.withCredentials = true;
+
+  xhr.addEventListener("readystatechange", function() {
+    if(this.readyState === 4) {
+      console.log(this.responseText);
+    }
+  });
+
+  xhr.open("GET", "https://script.google.com/macros/s/AKfycbzPEfjfXKUi5ED3k_O3h_LV5AyNIFrgJ__OBeWTDwd94c_3IoM/exec?firstname=firstnameqqq&lastname=lastnamewww");
+  xhr.setRequestHeader("Content-Type", "application/json");
+
+  xhr.send();
+
+})

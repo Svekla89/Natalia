@@ -19,5 +19,5 @@ const changeEmail = (event) => {
   }
 }
 
-const email = document.querySelector("input[type=email]")
-email.addEventListener("blur", event => changeEmail(event))//проверить валидность почты
+//const email = document.querySelector("input[type=email]")
+//email.addEventListener("blur", event => changeEmail(event))//проверить валидность почты
